@@ -43,7 +43,22 @@ const handleKeyPress = (e) => {
   return (
     <div id="app">
 
-<div className="bg-black d-flex justify-content-between align-items-center w-100">
+
+      {movies?.length > 0 ? (
+        <div className="container"> 
+      {movies.map((movie,index)=>(
+        <MovieCards key={index} apiUrl={apiUrl} {...movie}/>
+      ))}
+        </div>
+      ) : (
+        <h2 className="empty">😢 Filme não encontrado 😢</h2>
+      )}
+      <Footer
+        devName={"Juju"}
+        devLinks={"https://github.com/JulianaFulanetto"}
+      />
+
+<div className="bg-black-gradient d-flex justify-content-between align-items-center w-100">
       <img className="img-fluid w-1" src={Logo} alt="Logo" />
 
 
@@ -59,20 +74,7 @@ const handleKeyPress = (e) => {
         src={Lupa} alt="" />
       </div>
       </div>
-
-      {movies?.length > 0 ? (
-        <div className="container"> 
-      {movies.map((movie,index)=>(
-        <MovieCards key={index} apiUrl={apiUrl} {...movie}/>
-      ))}
-        </div>
-      ) : (
-        <h2 className="empty">😢 Filme não encontrado 😢</h2>
-      )}
-      <Footer
-        devName={"Juju"}
-        devLinks={"https://github.com/JulianaFulanetto"}
-      />
+      
     </div>
   );
 }
