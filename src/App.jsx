@@ -19,7 +19,7 @@ const App = () => {
 
 //Alimento com dados para não ficar nulo 
 useEffect(()=>{
-  searchMovies("Batman");
+  searchMovies("Turma da Mônica");
 }, []);
 
 //criando a conexão com a Api e tarazendo informações
@@ -59,10 +59,10 @@ const handleKeyPress = (e) => {
       ))}
         </div>
       ) : (
-        <h2 className="empty">😢 Filme não encontrado 😢</h2>
+        <h2 className="empty"> Filme não encontrado 😒</h2>
       )}
       <Footer
-        devName={"Juju"}
+        devName={"Juju e Loh"}
         devLinks={"https://github.com/JulianaFulanetto"}
       />
     </div>

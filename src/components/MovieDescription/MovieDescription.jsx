@@ -34,7 +34,7 @@ const MovieDescription = (props) => {
                   )}`}
                   target="_blank"
                 >
-                  ▶️ Assistir
+                  🎦 Assistir
                 </a>
               </div>
             </div>
