@@ -25,7 +25,8 @@ const MovieDescription = (props) => {
             </button>
             <div className={styles.movieType}>
               <div>
-                <img src={devFlix} alt="" />
+                <img src={devFlix
+                } alt="" />
                 {movieDesc.Type}
                 <h1>{movieDesc.Title}</h1>
                 <a

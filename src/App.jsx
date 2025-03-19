@@ -42,6 +42,8 @@ const handleKeyPress = (e) => {
 
   return (
     <div id="app">
+
+<div className="bg-black d-flex justify-content-between align-items-center w-100">
       <img className="img-fluid w-1" src={Logo} alt="Logo" />
 
 
@@ -55,6 +57,7 @@ const handleKeyPress = (e) => {
         <img 
         onClick={() => searchMovies(search)}
         src={Lupa} alt="" />
+      </div>
       </div>
 
       {movies?.length > 0 ? (
