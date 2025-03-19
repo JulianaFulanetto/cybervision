@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
 import Footer from "./components/footer/Footer";
 import MovieCards from "./components/movieCard/MovieCards";
 import Lupa from "./assets/search.svg"
 import Logo from "./assets/devflix.png"
+
+
 // import Logo from ""
 
 const App = () => {
