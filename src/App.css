@@ -28,6 +28,10 @@ body {
   overflow: hidden;
 }
 
+.img-fluid {
+  width: 200px;
+}
+
 .logo img {
   width: 70%;
   height: auto;

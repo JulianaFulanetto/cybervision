@@ -5,7 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import Footer from "./components/footer/Footer";
 import MovieCards from "./components/movieCard/MovieCards";
 import Lupa from "./assets/search.svg"
-import Logo from "./assets/devflix.png"
+import Logo from "./assets/Logo.png"
 
 
 // import Logo from ""
@@ -42,7 +42,8 @@ const handleKeyPress = (e) => {
 
   return (
     <div id="app">
-      <img className="Logo" src={Logo} alt="" />
+      <img className="img-fluid w-1" src={Logo} alt="Logo" />
+
 
       <div className="search">
         <input 
