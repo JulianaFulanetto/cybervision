@@ -1,5 +1,6 @@
 .movie {
-  width: 310px;
+  flex-shrink: 0; /* Evita que o flexbox achate os itens */
+  width: 310px; /* Mantém a largura fixa */
   height: 510px;
   margin: 1.5rem;
   position: relative;
@@ -7,7 +8,6 @@
   border: none;
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
