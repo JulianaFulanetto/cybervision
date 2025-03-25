@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.js";
 import Footer from "./components/footer/Footer";
 import MovieCards from "./components/movieCard/MovieCards";
 import Lupa from "./assets/search.svg";
@@ -61,10 +59,10 @@ const App = () => {
           ))}
         </div>
       ) : (
-        <h2 className="empty">😢 Filme não encontrado 😢</h2>
+        <h2 className="empty"> Filme não encontrado 😒</h2>
       )}
       <Footer
-        devName={"Juju"}
+        devName={"Juju e Loh"}
         devLinks={"https://github.com/JulianaFulanetto"}
       />
     </div>
