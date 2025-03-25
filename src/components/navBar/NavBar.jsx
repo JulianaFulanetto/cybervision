@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const NavBar = (props) => {
   return (
     <div className="bg-black-gradient d-flex justify-content-between align-items-center w-100 p-5 pt-0">
@@ -8,12 +9,12 @@ const NavBar = (props) => {
       <div className="search col-7">
         <input
           onKeyDown={props.handleKeyPress}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => props.setSearch(e.target.value)}
           type="text"
           placeholder="Pesquise por filmes"
         />
 
-        <img onClick={() => searchMovies(props.search)} src={props.Lupa} alt="" />
+        <img onClick={() => props.searchMovies(props.search)} src={props.Lupa} alt="" />
       </div>
     </div>
   );
