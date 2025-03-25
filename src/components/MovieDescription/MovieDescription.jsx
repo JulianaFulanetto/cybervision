@@ -42,12 +42,13 @@ const MovieDescription = (props) => {
           </div>
           <div className={styles.containerMisc}>
             <div className={styles.containerFlex}>
-              Avaliação: {movieDesc.imdbRating} | Duração: {movieDesc.Runtime} |{" "}
+              Avaliação: {movieDesc.imdbRating}| Duração:{movieDesc.Runtime}|
+              {" "}
               {movieDesc.Released}
             </div>
             <div className={styles.containerFlex}>
-              <p>Elenco: {movieDesc.Actors}</p>
-              <p>Gênero: {movieDesc.Genre}</p>
+              <p>| Elenco: {movieDesc.Actors}</p>
+              <p>| Gênero: {movieDesc.Genre}</p>
             </div>
           </div>
           <div className={styles.desc}>

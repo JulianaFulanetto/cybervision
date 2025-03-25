@@ -85,7 +85,7 @@
   }
   
   .containerMisc {
-    font-size: 14pt;
+    font-size: 10pt;
     display: flex;
     padding: 2em 2em 1em;
   }
@@ -95,6 +95,7 @@
   }
   
   .desc {
+    font-size: 10pt;
     padding: 0 2em 2em;
     text-align: justify;
   }

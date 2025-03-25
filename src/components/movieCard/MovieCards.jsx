@@ -11,6 +11,7 @@ const MovieCards = (props) => {
 
   return (
     <>
+  
       <div className={styles.movie} onClick={ToggleModal}>
         <div>
           <p>{props.Year}</p>
