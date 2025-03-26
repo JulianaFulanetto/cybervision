@@ -3,7 +3,7 @@ import "./App.css";
 import Footer from "./components/footer/Footer";
 import MovieCards from "./components/movieCard/MovieCards";
 import Lupa from "./assets/search.svg";
-import Logo from "./assets/Logo.png";
+import Logo from "./assets/LogoCV.png";
 // import NavBar from "./components/navBar/NavBar";
 
 // import Logo from ""
@@ -81,7 +81,6 @@ const App = () => {
 
       <Footer
         devName={"Juju e Loh"}
-        devLinks={"https://github.com/JulianaFulanetto"}
       />
     </div>
   );
