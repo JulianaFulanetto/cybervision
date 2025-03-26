@@ -18,6 +18,7 @@ const MovieDescription = (props) => {
           <div className={styles.movieInfo}>
             <img
               src={movieDesc.Poster}
+
               alt={`Imagem da capa do filme ${movieDesc.Title}`}
             />
             <button className={styles.btnClose} onClick={props.click}>

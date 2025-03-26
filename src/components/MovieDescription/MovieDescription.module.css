@@ -85,7 +85,7 @@
   }
   
   .containerMisc {
-    font-size: 10pt;
+    font-size: 13pt;
     display: flex;
     padding: 2em 2em 1em;
   }
@@ -95,9 +95,16 @@
   }
   
   .desc {
-    font-size: 10pt;
+    font-size: 15pt;
     padding: 0 2em 2em;
     text-align: justify;
+    width: auto; /* Permite que o texto ocupe toda a largura disponível */
+  max-width: 100%; /* Evita ultrapassar o contêiner do pôster */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; 
+  display: block; /* Garante que o texto se comporte como um bloco */
+   
   }
   
   @media screen and (max-width: 768px) {
