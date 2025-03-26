@@ -34,9 +34,10 @@ body {
 
 .bg-black-gradient {
   background: linear-gradient(to bottom, black, transparent);
-  position: fixed;
 }
-
+.bg-black-gradient2 {
+  background: linear-gradient(to top, black, transparent);
+}
 .logo {
   justify-content: left;
   max-width: 100%;
@@ -107,6 +108,8 @@ body {
   padding: 10px; /* Evita que os itens fiquem muito próximos das bordas */
   white-space: nowrap; /* Impede quebra de linha nos itens */
 }
+
+
 .container::-webkit-scrollbar {
   display: none;
 }

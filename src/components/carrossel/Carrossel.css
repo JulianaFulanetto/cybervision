@@ -1,4 +1,6 @@
 .carousel {
     margin-top: 300px; /* Adiciona espaço entre o Navbar e o Carrossel */
     margin-bottom: 0px; /* Adiciona espaço entre o Carrossel e os filmes */
+    -webkit-box-shadow: 1px 1px 1px #000000, -10px -10px 15px #000000f8;
   }
+

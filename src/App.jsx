@@ -6,6 +6,11 @@ import Lupa from "./assets/search.svg";
 import Logo from "./assets/Logo.png";
 import NavBar from "./components/navBar/NavBar";
 import { Carrossel } from "./components/carrossel/Carrossel";
+
+import spiderman from "./assets/spiderman.png";
+import scooby from "./assets/scooby.jpg";
+import rick from "./assets/rick.jpg";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./scss/styles.scss";
@@ -68,7 +73,11 @@ const App = () => {
       />
 
       <div className="mt-4">
-        <Carrossel />
+        <Carrossel 
+        spiderman={spiderman}
+        scooby={scooby}
+        rick={rick}
+        />
       </div>
       {/* Conteúdo principal */}
       <div className="flex-grow-1">
