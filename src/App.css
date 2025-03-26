@@ -62,7 +62,7 @@ body {
   border-radius: 4rem;
   background: #3f207e00;
   box-shadow: 1px 1px 1px #40207e, -1px -5px -40px #40207e;
-  -webkit-box-shadow: 1px 1px 1px #000000, -5px -5px 7px #000000;
+  -webkit-box-shadow: 1px 1px 1px #ffffff1f, -5px -5px 15px #ffffff81;
 }
 
 .search input {
