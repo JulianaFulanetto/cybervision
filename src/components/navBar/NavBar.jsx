@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./NavBar.module.css";
 
 const NavBar = (props) => {
   return (
-    <div className="bg-black-gradient d-flex justify-content-between align-items-center w-100 p-4">
+    <div className={`${styles["navbar-fixed"]} bg-black-gradient d-flex justify-content-between align-items-center w-100 p-4`}>
       <img className="img-fluid col-2" src={props.Logo} alt="Logo" />
 
       <div className="search col-7 d-flex align-items-center">

@@ -3,11 +3,14 @@
 
 :root {
   --font-raleway: "Raleway", sans-serif;
-  --bs-body-bg: #b695eb !important;
+  --bs-body-bg: var(--pastel-purple-500) !important;
 }
+
+
 [data-bs-theme="dark"] {
-  --bs-body-bg: #40207e !important;
+  --bs-body-bg: var(--pastel-purple-900) !important;
 }
+
 
 * {
   margin: 0;
