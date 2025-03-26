@@ -5,21 +5,26 @@ import MovieCards from "./components/movieCard/MovieCards";
 import Lupa from "./assets/search.svg";
 import Logo from "./assets/Logo.png";
 import NavBar from "./components/navBar/NavBar";
+import { Carrossel } from "./components/carrossel/Carrossel";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./scss/styles.scss";
 
 const App = () => {
+  const mudaTema = () => {
+    const tema = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
 
-const mudaTema = () => {
-const tema = window.matchMedia('(prefers-color-scheme: dark)').matches
-  ? 'dark'
-  : 'light';
+    document.documentElement.setAttribute("data-bs-theme", tema);
+  };
 
-  document.documentElement.setAttribute("data-bs-theme", tema);
-};
+  mudaTema();
 
-mudaTema();
-
-//adiciona o evento de mudança do tema au
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', mudaTema);
+  //adiciona o evento de mudança do tema au
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", mudaTema);
 
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
@@ -62,7 +67,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', mud
         handleKeyPress={handleKeyPress}
       />
 
-
+      <div className="mt-4">
+        <Carrossel />
+      </div>
       {/* Conteúdo principal */}
       <div className="flex-grow-1">
         {movies?.length > 0 ? (
