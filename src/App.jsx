@@ -29,7 +29,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', mud
   const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`;
 
   useEffect(() => {
-    searchMovies("Batman");
+    searchMovies("Toy Story");
   }, []);
 
   const searchMovies = async (title) => {

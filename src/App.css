@@ -83,12 +83,11 @@ body {
   cursor: pointer;
 } */
 
-.empty {
-  width: 100%;
-  margin-top: 3rem;
+.empty h3 {
+  width: 100% !important;
+  margin-top: 0rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: var(--font-raleway);
 
   color: #f9d3b4;
 }
@@ -108,6 +107,7 @@ body {
 .container::-webkit-scrollbar {
   display: none;
 }
+
 
 @media screen and (max-width: 600px) {
   .app {
