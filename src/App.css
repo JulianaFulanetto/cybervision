@@ -38,23 +38,24 @@ body {
 .bg-black-gradient2 {
   background: linear-gradient(to top, black, transparent);
 }
+/* 
 .logo {
   justify-content: left;
   max-width: 100%;
   overflow: hidden;
-}
+} */
 
 .img-fluid {
   width: 200px;
   margin-top: left;
 }
-
+/* 
 .logo img {
   width: 70%;
   height: auto;
   display: block;
   margin: auto;
-}
+} */
 
 .search {
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import devFlix from "/favicon.png"
+import devFlix from "/CVmovie.png";
 import styles from "./MovieDescription.module.css";
 
 const MovieDescription = (props) => {
@@ -18,6 +18,7 @@ const MovieDescription = (props) => {
           <div className={styles.movieInfo}>
             <img
               src={movieDesc.Poster}
+
               alt={`Imagem da capa do filme ${movieDesc.Title}`}
             />
             <button className={styles.btnClose} onClick={props.click}>

@@ -3,7 +3,8 @@ import "./App.css";
 import Footer from "./components/footer/Footer";
 import MovieCards from "./components/movieCard/MovieCards";
 import Lupa from "./assets/search.svg";
-import Logo from "./assets/Logo.png";
+
+import Logo from "./assets/LogoCV.png";
 import NavBar from "./components/navBar/NavBar";
 import { Carrossel } from "./components/carrossel/Carrossel";
 
@@ -82,7 +83,7 @@ const App = () => {
       {/* Conteúdo principal */}
       <div className="flex-grow-1">
         {movies?.length > 0 ? (
-          <div className="container mt-20">
+          <div className="container mt mt-20">
             <div
               className="d-flex flex-nowrap overflow-hidden gap-3 scroll-container"
               ref={scrollContainerRef}
@@ -101,7 +102,6 @@ const App = () => {
       {/* Rodapé */}
       <Footer
         devName={"Juju e Loh"}
-        devLinks={"https://github.com/JulianaFulanetto"}
       />
     </div>
   );
