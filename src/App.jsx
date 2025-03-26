@@ -1,84 +1,102 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./App.css";
 import Footer from "./components/footer/Footer";
 import MovieCards from "./components/movieCard/MovieCards";
 import Lupa from "./assets/search.svg";
+<<<<<<< HEAD
 import Logo from "./assets/LogoCV.png";
 // import NavBar from "./components/navBar/NavBar";
 
 // import Logo from ""
+=======
+import Logo from "./assets/Logo.png";
+import NavBar from "./components/navBar/NavBar";
+import { Carrossel } from "./components/carrossel/Carrossel";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./scss/styles.scss";
+>>>>>>> main
 
 const App = () => {
+  const mudaTema = () => {
+    const tema = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+
+    document.documentElement.setAttribute("data-bs-theme", tema);
+  };
+
+  mudaTema();
+
+  //adiciona o evento de mudança do tema au
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", mudaTema);
+
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
+  const scrollContainerRef = useRef(null); // Referência para o contêiner de rolagem
 
-  //Utilizando chave de API do arquivo .env
   const apiKey = "e4d577fa";
   const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`;
 
-  //Alimento com dados para não ficar nulo
   useEffect(() => {
     searchMovies("Toy Story");
   }, []);
 
-  //criando a conexão com a Api e tarazendo informações
   const searchMovies = async (title) => {
     const response = await fetch(`${apiUrl}&s=${title}`);
     const data = await response.json();
-
-    //alimentando o movies
     setMovies(data.Search);
   };
 
-  //e = evento | ao clicar ou digitar aconetece algo
   const handleKeyPress = (e) => {
     e.key === "Enter" && searchMovies(search);
   };
 
+  // Função para habilitar rolagem horizontal com Shift + Scroll
+  const handleHorizontalScroll = (e) => {
+    if (e.shiftKey) {
+      e.preventDefault();
+      scrollContainerRef.current.scrollLeft += e.deltaY;
+    }
+  };
+
   return (
-    <div id="app">
-      {/* <NavBar /> */}
-      <div className="bg-black-gradient d-flex justify-content-between align-items-center w-100 p-5 pt-0">
-        <img className="img-fluid col-2" src={Logo} alt="Logo" />
+    <div id="app" className="container-fluid d-flex flex-column">
+      {/* Navbar */}
+      <NavBar
+        Logo={Logo}
+        Lupa={Lupa}
+        setSearch={setSearch}
+        search={search}
+        searchMovies={searchMovies}
+        handleKeyPress={handleKeyPress}
+      />
 
-        <div className="search col-7">
-          <input
-            onKeyDown={handleKeyPress}
-            onChange={(e) => setSearch(e.target.value)}
-            type="text"
-            placeholder="Pesquise por filmes"
-          />
-
-          <img onClick={() => searchMovies(search)} src={Lupa} alt="" />
-        </div>
+      <div className="mt-4">
+        <Carrossel />
+      </div>
+      {/* Conteúdo principal */}
+      <div className="flex-grow-1">
+        {movies?.length > 0 ? (
+          <div className="container mt-20">
+            <div
+              className="d-flex flex-nowrap overflow-hidden gap-3 scroll-container"
+              ref={scrollContainerRef}
+              onWheel={handleHorizontalScroll} // Adiciona o evento de rolagem horizontal
+            >
+              {movies.map((movie, index) => (
+                <MovieCards key={index} apiUrl={apiUrl} {...movie} />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <h2 className="empty text-center mt-10">Filme não encontrado 😒</h2>
+        )}
       </div>
 
-      
-      {movies?.length > 0 ? (
-        <>
-          <div className="container">
-            {movies.map((movie, index) => (
-              <MovieCards key={index} apiUrl={apiUrl} {...movie} />
-            ))}
-          </div>
-        </>
-      ) : (
-        <h2 className="empty"> Filme não encontrado 😒</h2>
-      )}
-
-{movies?.length > 0 ? (
-        <>
-          <div className="container">
-            {movies.map((movie, index) => (
-              <MovieCards key={index} apiUrl={apiUrl} {...movie} />
-            ))}
-          </div>
-        </>
-      ) : (
-        <h2 className="empty"> Filme não encontrado 😒</h2>
-      )}
-
-
+      {/* Rodapé */}
       <Footer
         devName={"Juju e Loh"}
       />

@@ -1,19 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+
 :root {
   --font-raleway: "Raleway", sans-serif;
+  --bs-body-bg: var(--pastel-purple-500) !important;
 }
+
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--pastel-purple-900) !important;
+}
+
 
 * {
   margin: 0;
   border: 0;
   box-sizing: border-box;
 }
-
+/* 
 body {
   font-family: var(--font-raleway);
-  background: #40207e !important;
-}
+  background: #40207e ;
+} */
 
 #app {
   margin-top: 0px;
@@ -55,9 +63,9 @@ body {
   justify-content: center;
   padding: 1rem 1rem;
   border-radius: 4rem;
-  background: #40207e;
+  background: #3f207e00;
   box-shadow: 1px 1px 1px #40207e, -1px -5px -40px #40207e;
-  -webkit-box-shadow: 1px 1px 1px #40207e, -5px -5px 7px #40207e;
+  -webkit-box-shadow: 1px 1px 1px #ffffff1f, -5px -5px 15px #ffffff81;
 }
 
 .search input {
@@ -67,7 +75,7 @@ body {
   padding-right: 1rem;
   outline: none;
   color: #a1a1a1;
-  background: #40207e;
+  background: #00000000;
   font-size: 1.5rem;
   font-weight: 500;
 }
