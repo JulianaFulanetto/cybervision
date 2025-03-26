@@ -36,24 +36,24 @@ body {
   background: linear-gradient(to bottom, black, transparent);
   position: fixed;
 }
-
+/* 
 .logo {
   justify-content: left;
   max-width: 100%;
   overflow: hidden;
-}
+} */
 
 .img-fluid {
   width: 200px;
   margin-top: left;
 }
-
+/* 
 .logo img {
   width: 70%;
   height: auto;
   display: block;
   margin: auto;
-}
+} */
 
 .search {
 
